@@ -1,5 +1,6 @@
 /*
  * I added this by copy and pasting it in GitHub manually, lets see if it works...
+ * main() still needs to be modified to interface with Boss.java (if that's what we are supposed to do..)
  */
 package dungeontester.model;
 
