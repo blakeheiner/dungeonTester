@@ -3,8 +3,10 @@
  */
 package dungeontester;
 
+import dungeontester.model.Door;
 import dungeontester.model.Player;
 import dungeontester.model.Room;
+import dungeontester.model.Trap;
 
 /**
  * @author blakeheiner
@@ -32,7 +34,22 @@ public class DungeonTester {
         roomOne.setCol(15);
         
         String roomInfo = roomOne.toString();
-        System.out.println(roomOne);
+        System.out.println(roomInfo);
+        
+        Trap trapOne = new Trap();
+        trapOne.setName("KillerTrap");
+        trapOne.setPenalty(10);
+        
+        String trapInfo = trapOne.toString();
+        System.out.println(trapOne);
+        
+        Door doorOne = new Door();
+        doorOne.setOpen("N");
+        doorOne.setRow(20);
+        doorOne.setCol(15);
+        
+        String doorInfo = doorOne.toString();
+        System.out.println(doorOne);
         
     }
     
