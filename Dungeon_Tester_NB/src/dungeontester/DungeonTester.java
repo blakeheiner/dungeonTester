@@ -4,6 +4,7 @@
 package dungeontester;
 
 import dungeontester.model.Player;
+import dungeontester.model.Room;
 
 /**
  * @author blakeheiner
@@ -21,8 +22,17 @@ public class DungeonTester {
         playerOne.setpHealth(8);
         playerOne.setpStrength(12);
         
+        
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        Room roomOne = new Room();
+        roomOne.setName("EasyRoom");
+        roomOne.setRow(10);
+        roomOne.setCol(15);
+        
+        String roomInfo = roomOne.toString();
+        System.out.println(roomOne);
         
     }
     
