@@ -5,7 +5,11 @@ package dungeontester;
 
 import dungeontester.model.Backpack;
 import dungeontester.model.Challenge;
+import dungeontester.model.Combat;
 import dungeontester.model.Door;
+import dungeontester.model.Game;
+import dungeontester.model.Hello;
+import dungeontester.model.Map;
 import dungeontester.model.Player;
 import dungeontester.model.Room;
 import dungeontester.model.Trap;
@@ -66,6 +70,31 @@ public class DungeonTester {
         
         String challengeInfo = challengeOne.toString();
         System.out.println(challengeInfo);
+        
+        Hello initialHello = new Hello();
+        initialHello.setIsNew(true);
+        initialHello.setFileName("Game One");
+       
+        System.out.println(initialHello);
+       
+        Game gameOne = new Game();
+        gameOne.setTotalTimePlayed(12.30);
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
+        Combat fightOne = new Combat();
+        fightOne.setIsWinner(true);
+        
+        System.out.println(fightOne);
+        
+        Map gameMap = new Map();
+        gameMap.setColCount(5);
+        gameMap.setRowCount(5);
+        
+        String mapInfo = gameMap.toString();
+        System.out.println(mapInfo);
+        
         
     }
     
