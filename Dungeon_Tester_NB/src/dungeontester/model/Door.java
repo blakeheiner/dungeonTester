@@ -12,24 +12,24 @@ import java.util.Objects;
  *
  * @author bhaw2-l
  */
-public class Room implements Serializable {
+public class Door implements Serializable{
     
     //class instance variables
-    private String name;
+    private String open;
     private int row;
     private int col;
 
-    public Room() {
+    public Door() {
     }
     
     
 
-    public String getName() {
-        return name;
+    public String getOpen() {
+        return open;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOpen(String open) {
+        this.open = open;
     }
 
     public int getRow() {
@@ -50,17 +50,15 @@ public class Room implements Serializable {
 
     @Override
     public String toString() {
-        return "Room{" + "name=" + name + ", row=" + row + ", col=" + col + '}';
+        return "Door{" + "open=" + open + ", row=" + row + ", col=" + col + '}';
     }
-    
-    
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + this.row;
-        hash = 97 * hash + this.col;
+        hash = 37 * hash + Objects.hashCode(this.open);
+        hash = 37 * hash + this.row;
+        hash = 37 * hash + this.col;
         return hash;
     }
 
@@ -72,8 +70,8 @@ public class Room implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Room other = (Room) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        final Door other = (Door) obj;
+        if (!Objects.equals(this.open, other.open)) {
             return false;
         }
         if (this.row != other.row) {
@@ -84,7 +82,6 @@ public class Room implements Serializable {
         }
         return true;
     }
-   
     
     
     

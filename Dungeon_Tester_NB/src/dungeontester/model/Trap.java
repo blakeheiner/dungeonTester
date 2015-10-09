@@ -49,6 +49,13 @@ public class Trap implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "Trap{" + "name=" + name + ", penalty=" + penalty + '}';
+    }
+    
+    
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
