@@ -3,6 +3,8 @@
  */
 package dungeontester;
 
+import dungeontester.model.Backpack;
+import dungeontester.model.Challenge;
 import dungeontester.model.Door;
 import dungeontester.model.Player;
 import dungeontester.model.Room;
@@ -49,7 +51,21 @@ public class DungeonTester {
         doorOne.setCol(15);
         
         String doorInfo = doorOne.toString();
-        System.out.println(doorOne);
+        System.out.println(doorInfo);
+        
+        Backpack packOne = new Backpack();
+        packOne.setCapacity(100);
+        packOne.setUse("Which Item?");
+        
+        String packInfo = packOne.toString();
+        System.out.println(packInfo);
+        
+        Challenge challengeOne = new Challenge();
+        challengeOne.setName("Difficult Challenge");
+        challengeOne.setModifier(50);
+        
+        String challengeInfo = challengeOne.toString();
+        System.out.println(challengeInfo);
         
     }
     
