@@ -9,6 +9,7 @@ import dungeontester.model.Combat;
 import dungeontester.model.Door;
 import dungeontester.model.Game;
 import dungeontester.model.Hello;
+import dungeontester.model.Item;
 import dungeontester.model.Map;
 import dungeontester.model.Player;
 import dungeontester.model.Room;
@@ -94,6 +95,16 @@ public class DungeonTester {
         
         String mapInfo = gameMap.toString();
         System.out.println(mapInfo);
+        
+        Item itemOne = new Item();
+        itemOne.setName("Ring of Awesomeness");
+        itemOne.setWeight(12);
+        itemOne.setHealthBonus(10);
+        itemOne.setStrengthBonus(15);
+        itemOne.setHealthBonus(12);
+        
+        String itemInfo = itemOne.toString();
+        System.out.println(itemInfo);
         
         
     }
