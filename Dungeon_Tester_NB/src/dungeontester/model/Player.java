@@ -1,5 +1,5 @@
 /*
- * 
+ * This class contains the player name and stats.
  */
 package dungeontester.model;
 
@@ -17,10 +17,15 @@ public class Player implements Serializable {
     private int pHealth;
     private int pStrength;
     private int pAgility;
-
+    
+    //constructor
     public Player() {
     }
 
+    /*
+     * This is all the getter and setter functions
+     * for all instance variables.
+     */
     public String getName() {
         return name;
     }
@@ -52,12 +57,14 @@ public class Player implements Serializable {
     public void setpAgility(int pAgility) {
         this.pAgility = pAgility;
     }
-
+    
+    //here is our toString()
     @Override
     public String toString() {
         return "Player{" + "name=" + name + ", pHealth=" + pHealth + ", pStrength=" + pStrength + ", pAgility=" + pAgility + '}';
     }
 
+    //here is the hashCode()
     @Override
     public int hashCode() {
         int hash = 5;
@@ -68,6 +75,7 @@ public class Player implements Serializable {
         return hash;
     }
 
+    //This is the equals()
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
