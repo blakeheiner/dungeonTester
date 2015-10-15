@@ -9,6 +9,6 @@ package dungeontester.controll;
  *
  * @author blakeheiner
  */
-public class LocationControl {
+public class MapControl {
     
 }
