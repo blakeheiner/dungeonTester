@@ -5,7 +5,6 @@ package dungeontester;
 
 import dungeontester.model.Backpack;
 import dungeontester.model.Challenge;
-import dungeontester.model.Combat;
 import dungeontester.model.Door;
 import dungeontester.model.Game;
 import dungeontester.model.Hello;
@@ -83,11 +82,6 @@ public class DungeonTester {
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
-        
-        Combat fightOne = new Combat();
-        fightOne.setIsWinner(true);
-        
-        System.out.println(fightOne);
         
         Map gameMap = new Map();
         gameMap.setColCount(5);
