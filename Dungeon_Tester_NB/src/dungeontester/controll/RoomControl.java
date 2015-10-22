@@ -19,18 +19,25 @@ public class RoomControl {
         String errorCodeOne = "Base is invalid! Trap fires!";
         String errorCodeTwo = "Height is invalid! Trap fires";
                 
-        if(base <= 0 || base > 100)
+        if(base <= 0)
             error = -1;
         else 
             error = 0;
         
-        if(height <= 0 || height > 100)
+        if(base > 100)
+            error = -1;
+                
+        if(error == -1)
+            System.out.println(errorCodeOne);
+        
+        if(height <= 0)
             error = -2;
         else 
             error = 0;
         
-        if(error == -1)
-            System.out.println(errorCodeOne);
+        if(height > 100)
+            error = -2;
+       
         else if(error == -2)
             System.out.println(errorCodeTwo);
             
