@@ -3,6 +3,7 @@
  */
 package dungeontester;
 
+import dungeontester.controll.RoomControl;
 import dungeontester.model.Backpack;
 import dungeontester.model.Challenge;
 import dungeontester.model.Door;
@@ -100,7 +101,20 @@ public class DungeonTester {
         String itemInfo = itemOne.toString();
         System.out.println(itemInfo);
         
-        
+        //Trap Test 1
+        RoomControl trapTest = new RoomControl();
+        boolean testOne = trapTest.disarmTrap(16, 2, 4);
+        System.out.println(testOne);
+        boolean testTwo = trapTest.disarmTrap(16, 4, 8);
+        System.out.println(testTwo);
+        boolean testThree = trapTest.disarmTrap(16, 0, 2);
+        boolean testFour = trapTest.disarmTrap(16, 101, 2);
+        boolean testFive = trapTest.disarmTrap(16, 2, 0);
+        boolean testSix = trapTest.disarmTrap(16, 2, 100);
+        boolean testSeven = trapTest.disarmTrap(16, 0, 0);
+        boolean testEight = trapTest.disarmTrap(16, 101, 101);
+        // above should return true
+      
     }
     
 }
