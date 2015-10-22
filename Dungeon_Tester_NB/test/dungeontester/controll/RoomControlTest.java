@@ -32,6 +32,8 @@ public class RoomControlTest {
      */
     @Test
     public void testDisarmTrap() {
+        
+        //correct math
         System.out.println("Test One");
         double area = 16;
         double base = 4;
@@ -41,6 +43,7 @@ public class RoomControlTest {
         int result = instance.disarmTrap(area, base, height);
         assertEquals(expResult, result);
         
+        //incorrect math 
         System.out.println("Test Two");
         area = 16;
         base = 2;
@@ -49,6 +52,7 @@ public class RoomControlTest {
         result = instance.disarmTrap(area, base, height);
         assertEquals(expResult, result);
         
+        //invalid base
         System.out.println("Test Three");
         area = 16;
         base = -1;
@@ -57,14 +61,41 @@ public class RoomControlTest {
         result = instance.disarmTrap(area, base, height);
         assertEquals(expResult, result);
         
+        //invalid height
         System.out.println("Test Four");
         area = 16;
-        base = 101;
-        height = 4;
-        expResult = -1;
+        base = 2;
+        height = 101;
+        expResult = -2;
         result = instance.disarmTrap(area, base, height);
         assertEquals(expResult, result);
-                
+        
+        //test height boundary
+        System.out.println("Test Five");
+        area = 600;
+        base = 12;
+        height = 100;
+        expResult = 1;
+        result = instance.disarmTrap(area, base, height);
+        assertEquals(expResult, result);
+        
+        //test base boundary
+        System.out.println("Test Six");
+        area = 600;
+        base = 100;
+        height = 12;
+        expResult = 1;
+        result = instance.disarmTrap(area, base, height);
+        assertEquals(expResult, result);
+        
+        //test both boundaries
+        System.out.println("Test Seven");
+        area = 5000;
+        base = 100;
+        height = 100;
+        expResult = 1;
+        result = instance.disarmTrap(area, base, height);
+        assertEquals(expResult, result);
     }
     
 }

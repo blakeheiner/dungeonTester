@@ -12,17 +12,17 @@ public class RoomControl {
 
     public int disarmTrap(double area, double base, double height){
 
-        if(base <= 0 || base > 100)
+        if(base <= 0)
             return -1;
         
-        //if(base > 100)
-          //  return -1;
+        if(base > 100)
+            return -1;
         
-        if(height <= 0 || height >100)
+        if(height <= 0)
             return -2;
         
-        //if(height > 100)
-          //  return -2;
+        if(height > 100)
+            return -2;
 
         if(area == (base * height) / 2)
             return 1;
