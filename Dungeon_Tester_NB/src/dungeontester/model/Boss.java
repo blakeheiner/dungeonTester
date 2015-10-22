@@ -1,5 +1,5 @@
 /*
- * 
+ * This class contains the stats for the bosses.
  */
 package dungeontester.model;
 

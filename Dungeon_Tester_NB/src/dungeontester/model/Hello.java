@@ -1,5 +1,5 @@
 /*
- * TThis is the Main menu of sorts.
+ * This is the Main menu of sorts.
  * The 'Hello' class contains a boolean value (new or returning player)
  * as well as the fileName either way.
  */

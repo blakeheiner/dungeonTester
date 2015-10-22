@@ -1,5 +1,5 @@
 /*
- * 
+ * This class has information on the doors themselves
  */
 package dungeontester.model;
 

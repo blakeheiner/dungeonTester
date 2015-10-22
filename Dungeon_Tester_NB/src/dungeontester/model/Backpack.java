@@ -1,5 +1,6 @@
 /*
- * 
+ * This class is an inventory of items the player is currently carrying
+ * Items that are equiped will have an '*' next to them.
  */
 package dungeontester.model;
 

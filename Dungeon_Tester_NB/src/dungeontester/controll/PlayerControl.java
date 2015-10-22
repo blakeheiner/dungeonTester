@@ -7,6 +7,6 @@ package dungeontester.controll;
  *
  * @author blakeheiner
  */
-public class MapControl {
+public class PlayerControl {
     
 }

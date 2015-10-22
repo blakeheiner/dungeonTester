@@ -1,5 +1,5 @@
 /*
- * 
+ * This class contains the information about the various door challenges
  */
 package dungeontester.model;
 
