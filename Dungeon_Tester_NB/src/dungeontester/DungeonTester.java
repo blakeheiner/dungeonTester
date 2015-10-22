@@ -101,7 +101,6 @@ public class DungeonTester {
         String itemInfo = itemOne.toString();
         System.out.println(itemInfo);
         
-        //Trap Test 1
         RoomControl trapTest = new RoomControl();
         boolean testOne = trapTest.disarmTrap(16, 2, 4);
         System.out.println(testOne);
@@ -113,7 +112,6 @@ public class DungeonTester {
         boolean testSix = trapTest.disarmTrap(16, 2, 100);
         boolean testSeven = trapTest.disarmTrap(16, 0, 0);
         boolean testEight = trapTest.disarmTrap(16, 101, 101);
-        // above should return true
       
     }
     
