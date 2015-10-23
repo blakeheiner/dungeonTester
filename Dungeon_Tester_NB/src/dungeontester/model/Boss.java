@@ -13,9 +13,9 @@ public class Boss implements Serializable {
     
     //class instance variables
     private String name;
-    private int pHealth;
-    private int pStrength;
-    private int pAgility;
+    private int pHealth; // starts at 25 and doubles per level
+    private int pStrength; // starts at 5 and doubles per level
+    private int pAgility; // starts at 5 and doubles per level
 
     //the constructor
     public Boss() {
