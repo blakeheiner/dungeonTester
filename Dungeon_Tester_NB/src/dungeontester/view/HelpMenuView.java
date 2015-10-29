@@ -19,7 +19,7 @@ public class HelpMenuView {
             + "\n"
             + "\n Navigation Options "
             + "\n S - Save Game"
-            + "\n E - Exit"
+            + "\n E - Exit the menu"
             + "\n----------------------------------------------";
         
     void displayMenu() {

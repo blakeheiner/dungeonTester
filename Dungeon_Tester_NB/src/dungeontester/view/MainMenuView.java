@@ -98,9 +98,6 @@ public class MainMenuView {
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.displayMenu();
-
-        //MainMenuView mainMenu = new MainMenuView();
-        //mainMenu.displayMenu();
     }
 
     private void saveGame() {
