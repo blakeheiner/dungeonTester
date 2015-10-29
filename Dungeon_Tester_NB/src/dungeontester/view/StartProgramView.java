@@ -45,10 +45,41 @@ public class StartProgramView {
     public void displayBanner() {
         System.out.println("\n\n*********************************************");
         
-            System.out.println("*                                           *"
-                           + "\n* generic test text                         *"
-                           + "\n*                                           *");
-            System.out.println("*********************************************");
+            System.out.println("*                                            *"
+                           + "\n* Welcome to Dungeon Tester Inc. Here we     *"
+                           + "\n* test the limits of the mind and the body.  *"
+                           + "\n* Adventure awaits as you ascend into the    *"
+                           + "\n* dark.                                      *"
+                           + "\n*                                            *"
+                           + "\n* You wake up and find yourself in a dungeon *"
+                           + "\n* room, on the ground next to you is a book  *"
+                           + "\n* and a small dagger. You pick up the book   *"
+                           + "\n* and open to the first page which says.     *"
+                           + "\n*                                            *"
+                           + "\n* Welcome to the newest vault co. dungeon,   *"
+                           + "\n* we of vault co. thank you for your willing *"
+                           + "\n* testing services of our dungeon systems.   *"
+                           + "\n* We would like to remind you that at any    *"
+                           + "\n* time you can shout out the word HELP and   *"
+                           + "\n* receive help on how to navigate through    *"
+                           + "\n* the dungeon. Keep in mind that the         *"
+                           + "\n* monsters throughout the dungeon are not    *"
+                           + "\n* actors and are real monsters and will harm *"
+                           + "\n* you if given the chance. We have supplied  *"
+                           + "\n* you with a defense mechanism, it is a      *"
+                           + "\n* stick with a pointy blade of metal at the  *"
+                           + "\n* end. We’ve heard these are sometimes       *"
+                           + "\n* referred to as daggers but you may call it *"
+                           + "\n* what you want. The only way to collect     *"
+                           + "\n* your money is to leave the dungeon through *"
+                           + "\n* the top floor, if you are unable to        *"
+                           + "\n* complete the task your body will be left   *"
+                           + "\n* to rot in the dungeon adding to the        *"
+                           + "\n* atmosphere of the dungeon. Thank you for   *"
+                           + "\n* testing our dungeon, we hope to see you on *"
+                           + "\n* the other side!                            *"
+                           + "\n*                                            *");
+            System.out.println("**********************************************");
             
     }
 
@@ -79,9 +110,10 @@ public class StartProgramView {
     }
 
     public void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n=============================================");
-        System.out.println("Welcome to Dungeon Tester Inc. " + player.getName());
-        System.out.println("===============================================");
+        System.out.println("\n\n==============================================");
+        System.out.println("It's official");
+        System.out.println("Welcome to Dungeon Tester Inc! " + player.getName());
+        System.out.println("================================================");
     }
 
 }
