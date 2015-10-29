@@ -3,6 +3,7 @@
  */
 package dungeontester.view;
 
+import dungeontester.view.HelpMenuView;
 import java.util.Scanner;
 
 /**
@@ -33,7 +34,7 @@ public class MainMenuView {
             
             this.doAction(selection); // do action based on selection
             
-        } while (selection != 'E'); // an selection is not "Exit"
+        } while (selection != 'E' && selection != 'e'); // an selection is not "Exit"
     }
 
     private String getInput() {
@@ -94,8 +95,12 @@ public class MainMenuView {
         System.out.println("startExistingGame() fired");
     }
 
-    private void displayHelpMenu() {
-        System.out.println("displayHelpMenu() fired");
+    public void displayHelpMenu() {
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayMenu();
+
+        //MainMenuView mainMenu = new MainMenuView();
+        //mainMenu.displayMenu();
     }
 
     private void saveGame() {
