@@ -37,46 +37,46 @@ public class MainMenuView {
     }
 
     private String getInput() {
-        boolean valid = false; // indicates if the selection has been retrieved
-        char selection;
+        boolean valid = false; // indicates if the name has been retrieved
+        String input = null;
         Scanner keyboard = new Scanner(System.in); // keyboard input stream
         
-        while(!valid) { // while a valid selection has not been retrieved
+        while(!valid) { // while a valid name has not been retrieved
             
-            // prompt the user for selection
-            System.out.println("Enter your selection: ");
+            // prompt the user for a player's name
+            System.out.println("Enter selection below: ");
             
-            //get the selection from the keyboard and trim off the blanks
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-                    
-            // if the selection is invalid send error message
-            if (selection != 'G' || selection != 'H' || selection != 'S' || selection != 'E') {
-                System.out.println("*** Invalid Seleciton Try Again ***");
+            //get the name from the keyboard and trim off the blanks
+            input = keyboard.nextLine();
+            input = input.trim();
+            
+            // if the name is invalid (less than two characters in length))
+            if (input.length() > 1) {
+                System.out.println("Invalid selection");
                 continue; // and repeat again
             }
             break; // out of the (exit) repetition
         }
         
-        return selection;
+        return input;
     }
 
     private void doAction(char choice) {
         
         switch (choice) {
-            case 'N': //create and start a new game 
+            case 'N': case 'n'://create and start a new game 
                 this.startNewGame();
                 break;
-            case 'G': //get and start an existing game
+            case 'G': case 'g': //get and start an existing game
                 this.startExistingGame();
                 break;
-            case 'H': // display the help menu
+            case 'H': case 'h': // display the help menu
                 this.displayHelpMenu();
                 break;
-            case 'S': // Save the current game
+            case 'S':  case 's':// Save the current game
                 this.saveGame();
                 break;
-            case 'E': // Exit the program
+            case 'E': case 'e': // Exit the program
                 return;
             default:
                 System.out.println("\n*** Invalid Selecton; Try Again ***");
