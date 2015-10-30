@@ -18,6 +18,7 @@ public class HelpMenuView {
             + "\n Test text"
             + "\n"
             + "\n Navigation Options "
+            + "\n P - Player Stats"    
             + "\n S - Save Game"
             + "\n E - Exit the menu"
             + "\n----------------------------------------------";
@@ -71,6 +72,9 @@ public class HelpMenuView {
                     break;
                 case 'E': case 'e':
                     return;
+                case 'P': case 'p':
+                    this.playerStatsHelp();
+                    return;
                 default:
                     System.out.println("\n*** Invalid Selecton; Try Again ***");
                     break;     
@@ -79,5 +83,10 @@ public class HelpMenuView {
 
     private void saveGame() {
          System.out.println("saveGame() fired");
+         
+    }
+
+    private void playerStatsHelp() {
+        System.out.println("Health = 100 Strength = 24 Agility = 18");
     }
 }
