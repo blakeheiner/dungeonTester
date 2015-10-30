@@ -3,6 +3,7 @@
  */
 package dungeontester.view;
 
+import dungeontester.model.Player;
 import java.util.Scanner;
 
 /**
@@ -87,6 +88,10 @@ public class HelpMenuView {
     }
 
     private void playerStatsHelp() {
-        System.out.println("Health = 100 Strength = 24 Agility = 18");
+        //System.out.println("Health = 100 Strength = 24 Agility = 18");
+        Player playerOne = new Player();
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
     }
 }

@@ -14,15 +14,15 @@ public class Player implements Serializable {
     
     //Class instance variables
     private String name;
-    private int pHealth; // starts at 100
-    private int pStrength; // starts at 5 
-    private int pAgility; // starts at 5
-    private int pLuck; // starts at 5
-    private boolean rightHand;
-    private boolean leftHand;
-    private boolean bodyArmor;
-    private boolean feet;
-    private boolean head;
+    private int pHealth = 100; // starts at 100
+    private int pStrength = 5; // starts at 5 
+    private int pAgility = 5; // starts at 5
+    private int pLuck = 5; // starts at 5
+    private boolean rightHand = false;
+    private boolean leftHand = false;
+    private boolean bodyArmor = false;
+    private boolean feet = false;
+    private boolean head = false;
     
     //constructor
     public Player() {
