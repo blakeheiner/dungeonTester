@@ -22,7 +22,6 @@ public class Item implements Serializable{
     public Item() {
     }
 
-    
     public String getName() {
         return name;
     }

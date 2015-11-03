@@ -16,12 +16,18 @@ public class HelpMenuView {
             + "\n----------------------------------------------"
             + "\n| Help Menu                                  |"
             + "\n----------------------------------------------"
-            + "\n Test text"
+            + "\n In this game logic prevails when in doubt "
+            + "\n think critically about what is happening."
+            + "\n"
+            + "\n So far as equiping items and such you only "
+            + "\n have two hands, one head for one helmet, one "
+            + "\n set of feet for one pair of boots or shoes. "
+            + "\n You get the idea."    
             + "\n"
             + "\n Navigation Options "
-            + "\n P - Player Stats"    
+            + "\n P - View Player Stats"    
             + "\n S - Save Game"
-            + "\n E - Exit the menu"
+            + "\n R - Return to previous menu"
             + "\n----------------------------------------------";
         
     void displayMenu() {
@@ -36,7 +42,7 @@ public class HelpMenuView {
             
             this.doAction(selection); // do action based on selection
             
-        } while (selection != 'E' && selection != 'e'); // an selection is not "Exit"
+        } while (selection != 'R' && selection != 'r'); // an selection is not "Exit"
     }
 
     private String getInput() {
@@ -71,7 +77,7 @@ public class HelpMenuView {
                 case 'S':  case 's':// Save the current game
                     this.saveGame();
                     break;
-                case 'E': case 'e':
+                case 'R': case 'r':
                     return;
                 case 'P': case 'p':
                     this.playerStatsHelp();
@@ -94,4 +100,5 @@ public class HelpMenuView {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
     }
+
 }
