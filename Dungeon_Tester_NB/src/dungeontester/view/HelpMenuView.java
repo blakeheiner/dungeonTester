@@ -80,7 +80,11 @@ public class HelpMenuView {
                 case 'R': case 'r':
                     return;
                 case 'P': case 'p':
-                    this.playerStatsHelp();
+                    Player playerOne = new Player();
+        
+                    String playerInfo = playerOne.toString();
+                    System.out.println(playerInfo);
+                  //this.playerStatsHelp();
                     return;
                 default:
                     System.out.println("\n*** Invalid Selecton; Try Again ***");
@@ -93,12 +97,12 @@ public class HelpMenuView {
          
     }
 
-    private void playerStatsHelp() {
+    //private void playerStatsHelp() {
         //System.out.println("Health = 100 Strength = 24 Agility = 18");
-        Player playerOne = new Player();
+    //    Player playerOne = new Player();
         
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
-    }
+    //    String playerInfo = playerOne.toString();
+     //   System.out.println(playerInfo);
+   // }
 
 }

@@ -16,7 +16,8 @@ public class MainMenuView {
             + "\n----------------------------------------------"
             + "\n| Main Menu                                  |"
             + "\n----------------------------------------------"
-            + "\nG - Start Game"
+            + "\nN - New game"
+            + "\nG - Start Existing Game"
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
             + "\nE - Exit"
@@ -88,7 +89,7 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        System.out.println("statrNewGame() fired");
+        System.out.println("startNewGame() fired");
     }
 
     private void startExistingGame() {
