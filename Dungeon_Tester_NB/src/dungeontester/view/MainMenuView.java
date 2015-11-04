@@ -20,6 +20,8 @@ public class MainMenuView {
             + "\nG - Start Existing Game"
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
+            + "\nM - Game Menu Test"
+            + "\nD - Door Menu Test"
             + "\nE - Exit"
             + "\n----------------------------------------------";
     
@@ -75,9 +77,17 @@ public class MainMenuView {
             case 'H': case 'h': // display the help menu
                 this.displayHelpMenu();
                 break;
+            case 'M': case 'm': //test to link game menu
+                this.displayGameMenu();
+                break;
+            case 'D': case 'd': //test to link door view
+                this.displayDoorMenu();
+                break;
+                
             case 'S':  case 's':// Save the current game
                 this.saveGame();
                 break;
+                
             case 'E': case 'e': // Exit the program
                 return;
             default:
@@ -103,6 +113,16 @@ public class MainMenuView {
 
     private void saveGame() {
         System.out.println("saveGame() fired");
+    }
+
+    private void displayGameMenu() {
+        GamePlayMenu gameMenu = new GamePlayMenu();
+        gameMenu.displayMenu();
+    }
+
+    private void displayDoorMenu() {
+        DoorView doorMenu = new DoorView();
+        doorMenu.getInput();
     }
     
 }
