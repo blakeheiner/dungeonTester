@@ -50,24 +50,31 @@ public class DoorView {
         System.out.println("Enter a Height:");
         int height;
         height = in.nextInt();
-        System.out.println(height +" is the Height you entered!");
         
         System.out.println("Enter a Base: ");
         int base;
         base = in.nextInt();
-        System.out.println(base +" is the Base you entered!");
         
         System.out.println("Enter an Area: ");
         int area;
         area = in.nextInt();
-        System.out.println(area +" is the Area you entered!");
         
         RoomControl roomTrap = new RoomControl();
         int result = roomTrap.disarmTrap(area, base, height);
         
-        System.out.println(result);
-        
-        
+        if (result == 0) {
+            System.out.println("Wrong!");
         }
+        if (result == -1){
+            System.out.println("Invalid Base!");
+        }
+        if (result == -2){
+            System.out.println("Invalid Height!");
+        }
+        if (result == 1){
+            System.out.println("You're good to go!");
+        }
+    }
+         
         
 }
