@@ -43,7 +43,11 @@ public class DoorView {
     */
     public void getInput() {
         
-        System.out.println("You've come to a door!");
+        System.out.println("You've come to a door!  You see a triangle on the door.");
+        System.out.println("Underneath it says, 'To enter this area you need to know your math'");
+        System.out.println("Give me the Height, Base and Area of a triangle");
+        System.out.println("If you are right, you'll move on.");
+        System.out.println("If you are wrong... prepare to face my wrath!");
         
         Scanner in = new Scanner(System.in);
         
@@ -71,7 +75,7 @@ public class DoorView {
         if (result == -2){
             System.out.println("Invalid Height!");
         }
-        if (result == 1){
+        else {
             System.out.println("You're good to go!");
         }
     }
