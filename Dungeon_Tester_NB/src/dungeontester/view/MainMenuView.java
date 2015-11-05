@@ -21,7 +21,9 @@ public class MainMenuView {
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
             + "\nM - Game Menu Test"
-            + "\nD - Door Menu Test"
+            + "\nD - Door Menu Test"            
+            + "\nR - Map Menu Test"
+            + "\nC - Combat Menu Test"
             + "\nE - Exit"
             + "\n----------------------------------------------";
     
@@ -90,6 +92,11 @@ public class MainMenuView {
                 
             case 'E': case 'e': // Exit the program
                 return;
+            case 'R': case 'r':
+                this.mapView();   
+            case 'C': case'c':
+                this.combatView();
+                
             default:
                 System.out.println("\n*** Invalid Selecton; Try Again ***");
                 break;
@@ -123,6 +130,16 @@ public class MainMenuView {
     private void displayDoorMenu() {
         DoorView doorMenu = new DoorView();
         doorMenu.getInput();
+    }
+
+    private void mapView() {
+        MapView mapView = new MapView();
+        System.out.println(mapView.toString());
+    }
+
+    private void combatView() {
+        CombatView combatView = new CombatView();
+        combatView.displayMenu();
     }
     
 }
