@@ -11,7 +11,12 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
    
-    private String promptMessage;
+    Scanner keyboard = new Scanner(System.in);
+    protected String displayMessage;
+    
+    public View(String message) {
+        this.displayMessage = message;
+    }
     
     @Override
     public void display(){
@@ -19,7 +24,7 @@ public abstract class View implements ViewInterface {
         boolean done = false;
         
         do{
-            System.out.println(this.promptMessage); //display prompt message
+            System.out.println(this.displayMessage); //display prompt message
             value = this.getInput(); // get value end user entered
             done = this.doAction(value); // do action based on value entered
         }while (!done);
