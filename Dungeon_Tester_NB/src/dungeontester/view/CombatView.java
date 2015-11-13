@@ -10,9 +10,10 @@ import java.util.Scanner;
  *
  * @author blakeheiner
  */
-public class CombatView {
+public class CombatView extends View {
 
-        private final String MENU = "\n"
+    public CombatView() {
+        super("\n"
             + "\n----------------------------------------------"
             + "\n| Combat Menu                                  |"
             + "\n----------------------------------------------"  
@@ -27,52 +28,21 @@ public class CombatView {
             + "\n P - View Player Stats"    
             + "\n S - Save Game"
             + "\n R - Return to previous menu/Run from the fight"
-            + "\n----------------------------------------------";
+            + "\n----------------------------------------------");
         
-    void displayMenu() {
-                
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU); // display the main menu
-            
-            String input = this.getInput(); // get the user's selection
-            selection = input.charAt(0); // get first character of string
-            
-            this.doAction(selection); // do action based on selection
-            
-        } while (selection != 'R' && selection != 'r'); // an selection is not "Exit"
     }
+        
+    
 
-    private String getInput() {
+    
+    @Override
+    public boolean doAction(Object obj) {
         
-        boolean valid = false; // indicates if the name has been retrieved
-        String input = null;
-        Scanner keyboard = new Scanner(System.in); // keyboard input stream
-        
-        while(!valid) { // while a valid name has not been retrieved
+        String value = (String) obj;
+        value=value.toUpperCase(); //convert to all upper case
+        char choice = value.charAt(0); //get first character entered
             
-            // prompt the user for a player's name
-            System.out.println("Enter selection below: ");
-            
-            //get the name from the keyboard and trim off the blanks
-            input = keyboard.nextLine();
-            input = input.trim();
-            
-            // if the name is invalid (less than two characters in length))
-            if (input.length() > 1) {
-                System.out.println("Invalid selection");
-                continue; // and repeat again
-            }
-            break; // out of the (exit) repetition
-        }
-        
-        return input;  
-    }
-
-    private void doAction(char selection) {
-            
-            switch (selection) {
+            switch (choice) {
                 case 'F': case 'f':
                     this.fightMonster();
                     break;
@@ -83,11 +53,12 @@ public class CombatView {
                     this.playerStatsHelp();
                     break;
                 case 'R': case 'r':
-                    return;
+                    return true;
                 default:
                     System.out.println("\n*** Invalid Selecton; Try Again ***");
                     break;     
     }
+            return false;
 }
 
     private void saveGame() {

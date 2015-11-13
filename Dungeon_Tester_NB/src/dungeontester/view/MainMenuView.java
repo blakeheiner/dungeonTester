@@ -110,7 +110,7 @@ public class MainMenuView extends View {
 
     private void combatView() {
         CombatView combatView = new CombatView();
-        combatView.displayMenu();
+        combatView.display();
     }
     
 }
