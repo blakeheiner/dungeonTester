@@ -60,9 +60,16 @@ public class GamePlayMenu extends View {
         System.out.println("movePlayer() fired");  
     }
 
-    private void startViewInventory() {
+    /* private void startViewInventory() {
         System.out.println("viewInventory() fired");
+    } */
+    
+    public void startViewInventory() {
+        InventoryView inventoryMenu = new InventoryView();
+        inventoryMenu.display();
     }
-
     
 }
+
+    
+
