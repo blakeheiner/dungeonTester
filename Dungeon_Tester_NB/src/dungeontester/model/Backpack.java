@@ -16,11 +16,18 @@ public class Backpack implements Serializable{
     //class instance variables
     private int capacity;
     private String use;
-
+    private Item item;
+    
     public Backpack() {
     }
-    
-    
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
 
     public int getCapacity() {
         return capacity;

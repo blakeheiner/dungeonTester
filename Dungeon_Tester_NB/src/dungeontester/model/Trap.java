@@ -13,13 +13,22 @@ import java.util.Objects;
  */
 public class Trap implements Serializable {
 
-    public Trap() {
-    }
-
     //class name variables
     private String name;
     private int penalty; 
+    private Room room;
+    
+    public Trap() {
+    }
 
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+    
     public String getName() {
         return name;
     }

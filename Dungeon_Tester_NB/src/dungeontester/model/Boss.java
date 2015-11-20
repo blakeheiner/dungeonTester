@@ -15,13 +15,22 @@ public class Boss implements Serializable {
     private String name;
     private int pHealth; // starts at 25 and doubles per level
     private int pStrength; // starts at 3 and increases by 2 per level
-    private int pAgility; // starts at 3 and increases by 2 per level
-
+    private int pAgility; // starts at 3 and increases by 2 per leve
+    private Room room;
+    
     //the constructor
     public Boss() {
     }
     
+    public Room getRoom() {
+        return room;
+    }
+
     //all the getter and sender functions
+    public void setRoom(Room room) {    
+        this.room = room;
+    }
+
     public String getName() {
         return name;
     }

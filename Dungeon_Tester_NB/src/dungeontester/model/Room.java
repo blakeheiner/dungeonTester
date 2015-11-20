@@ -16,12 +16,10 @@ public class Room implements Serializable {
     private String name;
     private int row;
     private int col;
-
+   
     public Room() {
     }
-    
-    
-
+   
     public String getName() {
         return name;
     }

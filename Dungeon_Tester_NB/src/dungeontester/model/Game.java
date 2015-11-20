@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class Game implements Serializable{
     
     private double totalTimePlayed;
-
+    
     public Game() {
     }
     

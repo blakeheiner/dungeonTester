@@ -15,10 +15,18 @@ public class Challenge implements Serializable{
     //class instance variables
     private String name;
     private int modifier;
-
+    private Room room;
+    
     public Challenge() {
     }
 
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
     
     public String getName() {
         return name;
