@@ -3,17 +3,8 @@
  */
 package dungeontester;
 
-import dungeontester.controll.RoomControl;
-import dungeontester.model.Backpack;
-import dungeontester.model.Challenge;
-import dungeontester.model.Door;
 import dungeontester.model.Game;
-import dungeontester.model.Hello;
-import dungeontester.model.Item;
-import dungeontester.model.Map;
 import dungeontester.model.Player;
-import dungeontester.model.Room;
-import dungeontester.model.Trap;
 import dungeontester.view.StartProgramView;
 
 /**

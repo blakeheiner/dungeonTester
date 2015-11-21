@@ -4,79 +4,36 @@
 package dungeontester.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
  * @author bhaw2-l
  */
-public class Challenge implements Serializable{
+public enum Challenge implements Serializable{
     
-    //class instance variables
-    private String name;
+    Triangle(-10, 
+            "If 2 legs of a triangle are 3 and 4 what is the hypotenuse?",
+            5),
+    Square(-10,
+           "Given the sides of a square are 5 and 5 what is the area?",
+           25),
+    Rectangle(-10,
+              "Given the sides of a rectangle are 5 and 12 what is/n"
+                      + "it's diagonal?",
+              13);
+    
     private int modifier;
-    private Room room;
+    private String question;
+    private int answer;
     
-    public Challenge() {
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-    
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    Challenge(int modifier, String question, int answer) {
+        this.modifier = 0;
+        this.question = "You are one lucky soul!";
+        this.answer = 0;
     }
 
     public int getModifier() {
         return modifier;
     }
 
-    public void setModifier(int modifier) {
-        this.modifier = modifier;
-    }
-
-    @Override
-    public String toString() {
-        return "Challenge{" + "name=" + name + ", modifier=" + modifier + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 23 * hash + Objects.hashCode(this.name);
-        hash = 23 * hash + this.modifier;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Challenge other = (Challenge) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (this.modifier != other.modifier) {
-            return false;
-        }
-        return true;
-    }
-    
-    
-    
-    
-    
 }
