@@ -25,7 +25,8 @@ public class DungeonTester {
     private static Player player = null;
         
     public static void main(String[] args) {
-  
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
     }
 
     public static Game getCurrentGame() {
