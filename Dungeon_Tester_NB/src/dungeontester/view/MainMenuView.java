@@ -3,7 +3,6 @@
  */
 package dungeontester.view;
 
-import dungeontester.controll.GameControl;
 /**
  *
  * @author blakeheiner

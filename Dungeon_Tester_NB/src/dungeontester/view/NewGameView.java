@@ -3,8 +3,6 @@
  */
 package dungeontester.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author blakeheiner
@@ -19,28 +17,17 @@ public class NewGameView extends View{
             + "\n Please enter a savefile name below."
             + "\n----------------------------------------------");
     }
-
+    
     @Override
     public boolean doAction(Object obj) {
+        String fileName = (String) obj;
        
-        GamePlayMenu goToGame = new GamePlayMenu();
-                
-        String saveFileName = getInput();
-        
-        if(saveFileName != null){
-        
-        System.out.println("\n\n==============================================");
-        System.out.println("Your savefile is " + saveFileName + ".");
-        System.out.println("================================================");
-                
-        goToGame.display();    
-        
-            return true;
-        }
-        else 
-        return false;
-        
-        
-}
-
+       if(fileName.length() > 1){
+           GamePlayMenu goToGame = new GamePlayMenu();
+           goToGame.display();
+           return true;
+       }
+       else
+       return false;
+    }
 }
