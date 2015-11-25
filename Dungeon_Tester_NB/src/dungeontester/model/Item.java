@@ -4,7 +4,7 @@
 package dungeontester.model;
 
 import java.io.Serializable;
-import java.util.Objects;
+//import java.util.Objects;
 
 /**
  *
@@ -12,12 +12,17 @@ import java.util.Objects;
  */
 public enum Item implements Serializable{
     
-    ShortSword(1, 0, 1, 2),
-    LongSword(1, 0, 3, 2),
-    BroadSword(2, 1, 4, 0),
-    RingOfPower(2, 3, 5, 3),
-    Buckler(1, 2, 0, -1),
-    Shield(2, 3, 1, 0),
+    ShortSword(1, 0, 3, 2),
+    LongSword(1, 0, 5, 2),
+    BroadSword(2, 1, 7, 0),
+    RingOfPower(2, 3, 9, 3),
+    Buckler(1, 10, 0, -1),
+    Shield(2, 50, 1, 0),
+    ChainMail(2, 40, 0, -1),
+    LeatherArmor(1, 30, 1, 0),
+    IronArmor(5, 100, 5, -2),
+    SteelArmor(6, 150, 6, -2),
+    SilverArmor(3, 200, 10, -1),
     Cloak(0, 1, 0, 4);
     
     //class instance variables

@@ -44,11 +44,7 @@ public class HelpMenuView extends View {
                     this.saveGame();
                     break;
                 case 'P': case 'p':
-                    Player playerOne = new Player();
-        
-                    String playerInfo = playerOne.toString();
-                    System.out.println(playerInfo);
-                  //this.playerStatsHelp();
+                    this.playerStatsHelp();
                     break;
                 case 'R': case 'r':
                     return true;   
@@ -64,12 +60,13 @@ public class HelpMenuView extends View {
          
     }
 
-    //private void playerStatsHelp() {
-        //System.out.println("Health = 100 Strength = 24 Agility = 18");
-    //    Player playerOne = new Player();
+    private boolean playerStatsHelp() {
+        Player playerOne = new Player();
         
-    //    String playerInfo = playerOne.toString();
-     //   System.out.println(playerInfo);
-   // }
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        
+        return false;
+    }
 
 }

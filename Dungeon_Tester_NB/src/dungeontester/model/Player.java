@@ -15,7 +15,7 @@ public class Player implements Serializable {
     //Class instance variables
     private String name;
     private int pHealth = 100; // starts at 100
-    private int pStrength = 5; // starts at 5 
+    private int pStrength = 5; // starts at 5
     private int pAgility = 5; // starts at 5
     private int pLuck = 5; // starts at 5
     private boolean rightHand = false;
@@ -25,7 +25,7 @@ public class Player implements Serializable {
     private boolean head = false;
     
     //constructor
-    public Player() {
+    public Player(){ 
     }
 
     /*

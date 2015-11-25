@@ -3,9 +3,7 @@
  */
 package dungeontester.view;
 
-import dungeontester.view.HelpMenuView;
-import java.util.Scanner;
-
+import dungeontester.controll.GameControl;
 /**
  *
  * @author blakeheiner
@@ -21,16 +19,9 @@ public class MainMenuView extends View {
             + "\nG - Start Existing Game"
             + "\nH - Get help on how to play the game"
             + "\nS - Save game"
-            + "\nM - Game Menu Test"
-            + "\nD - Door Menu Test"            
-            + "\nR - Map Menu Test"
-            + "\nC - Combat Menu Test"
             + "\nE - Exit"
             + "\n----------------------------------------------");
     }
-    
-    
-
     
     @Override
     public boolean doAction(Object obj) {
@@ -49,35 +40,23 @@ public class MainMenuView extends View {
             case 'H': case 'h': // display the help menu
                 this.displayHelpMenu();
                 break;
-            case 'M': case 'm': //test to link game menu
-                this.displayGameMenu();
-                break;
-            case 'D': case 'd': //test to link door view
-                this.displayDoorMenu();
-                break;
-                
             case 'S':  case 's':// Save the current game
                 this.saveGame();
                 break;
-                
             case 'E': case 'e': // Exit the program
-                return true;
-            case 'R': case 'r':
-                this.mapView();   
-            case 'C': case'c':
-                this.combatView();
-                
+                return true;              
             default:
                 System.out.println("\n*** Invalid Selecton; Try Again ***");
-                break;       
-                        
-        }
-        
+                break;                              
+        }       
         return false;
     }
 
     private void startNewGame() {
-        System.out.println("startNewGame() fired");
+        GameControl.createNewGame();
+        
+        GamePlayMenu gamePlayMenu = new GamePlayMenu();
+        gamePlayMenu.display();
     }
 
     private void startExistingGame() {
@@ -92,25 +71,4 @@ public class MainMenuView extends View {
     private void saveGame() {
         System.out.println("saveGame() fired");
     }
-
-    private void displayGameMenu() {
-        GamePlayMenu gameMenu = new GamePlayMenu();
-        gameMenu.display();
-    }
-
-    private void displayDoorMenu() {
-        DoorView doorMenu = new DoorView();
-        doorMenu.getInput();
-    }
-
-    private void mapView() {
-        MapView mapView = new MapView();
-        System.out.println(mapView.toString());
-    }
-
-    private void combatView() {
-        CombatView combatView = new CombatView();
-        combatView.display();
-    }
-    
 }

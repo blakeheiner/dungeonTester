@@ -22,9 +22,9 @@ public enum Challenge implements Serializable{
                       + "it's diagonal?",
               13);
     
-    private int modifier;
-    private String question;
-    private int answer;
+    private final int modifier;
+    private final String question;
+    private final int answer;
     
     Challenge(int modifier, String question, int answer) {
         this.modifier = 0;
@@ -35,5 +35,12 @@ public enum Challenge implements Serializable{
     public int getModifier() {
         return modifier;
     }
-
+   
+    public String getQuestion(){
+    	return question;
+    }
+    
+    public int getAnswer() {
+	return answer;
+    }
 }

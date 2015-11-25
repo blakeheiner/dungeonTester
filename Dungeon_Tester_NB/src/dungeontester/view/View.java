@@ -32,24 +32,24 @@ public abstract class View implements ViewInterface {
     
     @Override
     public String getInput(){
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
-        String value = null;
+        String selection = null;
         
         //while a valid name has not been retrieved
         while (!valid){
             
             //get the value entered from the keyboard
-            value = keyboard.nextLine();
-            value = value.trim();
+            selection = keyboard.nextLine();
+            selection = selection.trim();
             
-            if(value.length() < 1){
+            if(selection.length() < 1){
                 System.out.println("You must enter a value.");
                 continue;
             }
             break;
         }
         
-        return value;
+        return selection;
     }
 }

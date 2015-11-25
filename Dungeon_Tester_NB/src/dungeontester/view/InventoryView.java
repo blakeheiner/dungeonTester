@@ -23,14 +23,13 @@ public class InventoryView extends View {
             + "\n"
             + "\n Navigation Options "
             + "\n V - View Inventory"    
-            + "\n U - Use Items"
+            + "\n U - Use or Equip Items"
             + "\n R - Return to previous menu"
             + "\n----------------------------------------------");
     }
 
     @Override
     public boolean doAction(Object obj) {
-        
         String value = (String) obj;
         value = value.toUpperCase(); //convert to all upper case
         char choice = value.charAt(0); //get first character entered  
@@ -53,19 +52,10 @@ public class InventoryView extends View {
 
     private void saveGame() {
          System.out.println("saveGame() fired");
-         
     }
 
-    //private void playerStatsHelp() {
-        //System.out.println("Health = 100 Strength = 24 Agility = 18");
-    //    Player playerOne = new Player();
-        
-    //    String playerInfo = playerOne.toString();
-     //   System.out.println(playerInfo);
-   // }
-
     private void viewEquipment() {
-        System.out.println("viewInventory() fired");
+        System.out.println("viewEquipment() fired");
     }
 
     private void useEquipment() {

@@ -3,8 +3,6 @@
  */
 package dungeontester.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author blakeheiner
@@ -21,25 +19,24 @@ public class GamePlayMenu extends View {
             + "\nI - Inventory"
             + "\nR - Return to Main Menu"
             + "\n----------------------------------------------");
-    
 }   
     
      @Override
     public boolean doAction(Object obj) {
 
-    String value = (String) obj;
+        String value = (String) obj;
         value = value.toUpperCase(); //convert to all upper case
         char choice = value.charAt(0); //get first character entered
         
         switch (choice) {
             case 'V': case 'v'://view the map
-                this.startViewMap();
+                this.viewMap();
                 break;
             case 'M': case 'm': //move player
-                this.startMovePlayer();
+                this.movePlayer();
                 break;
             case 'I': case 'i': // view the inventory menu
-                this.startViewInventory();
+                this.viewInventory();
                 break;
             case 'R':  case 'r':// Return to Main Menu
                 return true;
@@ -52,19 +49,15 @@ public class GamePlayMenu extends View {
         return false;
     }
 
-    private void startViewMap() {
+    private void viewMap() {
         System.out.println("viewMap() fired"); 
     }
 
-    private void startMovePlayer() {
+    private void movePlayer() {
         System.out.println("movePlayer() fired");  
     }
-
-    /* private void startViewInventory() {
-        System.out.println("viewInventory() fired");
-    } */
     
-    public void startViewInventory() {
+    public void viewInventory() {
         InventoryView inventoryMenu = new InventoryView();
         inventoryMenu.display();
     }

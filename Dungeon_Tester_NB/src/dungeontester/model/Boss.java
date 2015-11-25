@@ -16,9 +16,9 @@ public enum Boss implements Serializable {
     Hydra(200, 9, 9),
     Craken(400, 12, 12);
    
-    private int bHealth; // starts at 25 and doubles per level
-    private int bStrength; // starts at 3 and increases by 2 per level
-    private int bAgility; // starts at 3 and increases by 2 per leve
+    private final int bHealth; // starts at 25 and doubles per level
+    private final int bStrength; // starts at 3 and increases by 2 per level
+    private final int bAgility; // starts at 3 and increases by 2 per leve
 
     
     //the constructor

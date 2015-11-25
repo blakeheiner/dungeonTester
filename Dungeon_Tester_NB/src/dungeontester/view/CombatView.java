@@ -4,7 +4,6 @@
 package dungeontester.view;
 
 import dungeontester.model.Player;
-import java.util.Scanner;
 
 /**
  *
@@ -18,22 +17,18 @@ public class CombatView extends View {
             + "\n| Combat Menu                                  |"
             + "\n----------------------------------------------"  
             + "\n"            
-            + "\n You enter the room and find a fierce Dragon."            
+            + "\n You enter the room to find it not empty!"            
             + "\n"            
             + "\n F - Fight the beast!"
-            + "\n R - Run far and fast, you'll fight when you "            
+            + "\n R - Run far and fast; you'll fight when you "            
             + "\n     have more courage..."            
             + "\n"
             + "\n Navigation Options "
             + "\n P - View Player Stats"    
             + "\n S - Save Game"
             + "\n R - Return to previous menu/Run from the fight"
-            + "\n----------------------------------------------");
-        
+            + "\n----------------------------------------------");    
     }
-        
-    
-
     
     @Override
     public boolean doAction(Object obj) {
@@ -62,12 +57,10 @@ public class CombatView extends View {
 }
 
     private void saveGame() {
-         System.out.println("saveGame() fired");
-         
+        System.out.println("saveGame() fired");
     }
 
     private void playerStatsHelp() {
-        System.out.println("Health = 100 Strength = 24 Agility = 18");
         Player playerOne = new Player();
         
         String playerInfo = playerOne.toString();
