@@ -53,10 +53,8 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        GameControl.createNewGame();
-        
-        GamePlayMenu gamePlayMenu = new GamePlayMenu();
-        gamePlayMenu.display();
+        NewGameView newGame = new NewGameView();
+        newGame.display();
     }
 
     private void startExistingGame() {
