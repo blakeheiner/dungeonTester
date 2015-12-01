@@ -16,17 +16,18 @@ public class Backpack implements Serializable{
     //class instance variables
     private int capacity;
     private String use;
-    private Item item;
+    private Item[] items;
+    
     
     public Backpack() {
     }
 
-    public Item getItem() {
-        return item;
+    public Item[] getItems() {
+        return items;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
+    public void setItems(Item[] items) {
+        this.items = items;
     }
 
     public int getCapacity() {

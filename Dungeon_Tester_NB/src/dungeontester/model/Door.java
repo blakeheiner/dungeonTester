@@ -16,11 +16,11 @@ public class Door implements Serializable{
     private String open;
     private int row;
     private int col;
+    
+    private Challenge[] challenges;
 
     public Door() {
     }
-    
-    
 
     public String getOpen() {
         return open;
@@ -44,6 +44,14 @@ public class Door implements Serializable{
 
     public void setCol(int col) {
         this.col = col;
+    }
+
+    public Challenge[] getChallenges() {
+        return challenges;
+    }
+
+    public void setChallenges(Challenge[] challenges) {
+        this.challenges = challenges;
     }
 
     @Override

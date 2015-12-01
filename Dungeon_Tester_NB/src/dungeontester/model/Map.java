@@ -13,8 +13,17 @@ public class Map implements Serializable{
     
     private int rowCount;
     private int colCount;
+    private Room[] rooms;
 
     public Map() {
+    }
+
+    public Room[] getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(Room[] rooms) {
+        this.rooms = rooms;
     }
     
     public int getRowCount() {

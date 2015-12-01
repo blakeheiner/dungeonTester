@@ -24,6 +24,8 @@ public class Player implements Serializable {
     private boolean feet = false;
     private boolean head = false;
     
+    private Backpack backpack;
+    
     //constructor
     public Player(){ 
     }
@@ -110,6 +112,14 @@ public class Player implements Serializable {
 
     public void setHead(boolean head) {
         this.head = head;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
     }
     
     //here is our toString()

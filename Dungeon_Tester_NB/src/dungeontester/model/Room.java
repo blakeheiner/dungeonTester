@@ -15,6 +15,11 @@ public class Room implements Serializable {
     //class instance variables
     private int row;
     private int col;
+    
+    private Door[] doors;
+    private Trap[] traps;
+    private Item[] items;
+    private Boss[] bosses;
    
     public Room() {
     }
@@ -33,6 +38,38 @@ public class Room implements Serializable {
 
     public void setCol(int col) {
         this.col = col;
+    }
+
+    public Door[] getDoors() {
+        return doors;
+    }
+
+    public void setDoors(Door[] doors) {
+        this.doors = doors;
+    }
+
+    public Trap[] getTraps() {
+        return traps;
+    }
+
+    public void setTraps(Trap[] traps) {
+        this.traps = traps;
+    }
+
+    public Item[] getItems() {
+        return items;
+    }
+
+    public void setItems(Item[] items) {
+        this.items = items;
+    }
+
+    public Boss[] getBosses() {
+        return bosses;
+    }
+
+    public void setBosses(Boss[] bosses) {
+        this.bosses = bosses;
     }
 
     @Override
