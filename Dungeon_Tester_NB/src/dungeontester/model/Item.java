@@ -1,5 +1,5 @@
 /*
- * 
+ * There will be 3 rooms with items in them per level
  */
 package dungeontester.model;
 
