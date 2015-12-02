@@ -3,6 +3,9 @@
  */
 package dungeontester.view;
 
+import dungeontester.DungeonTester;
+import dungeontester.controll.GameControl;
+
 /**
  *
  * @author blakeheiner
@@ -52,6 +55,8 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
+        GameControl.createNewGame(DungeonTester.getPlayer());
+        
         NewGameView newGame = new NewGameView();
         newGame.display();
     }
