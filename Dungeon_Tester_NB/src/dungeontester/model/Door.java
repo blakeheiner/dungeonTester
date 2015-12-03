@@ -17,7 +17,7 @@ public class Door implements Serializable{
     private int row;
     private int col;
     
-    private Challenge[] challenges;
+    private Challenge challenge;
 
     public Door() {
     }
@@ -46,25 +46,21 @@ public class Door implements Serializable{
         this.col = col;
     }
 
-    public Challenge[] getChallenges() {
-        return challenges;
+    public Challenge getChallenge() {
+        return challenge;
     }
 
-    public void setChallenges(Challenge[] challenges) {
-        this.challenges = challenges;
-    }
-
-    @Override
-    public String toString() {
-        return "Door{" + "open=" + open + ", row=" + row + ", col=" + col + '}';
+    public void setChallenge(Challenge challenge) {
+        this.challenge = challenge;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.open);
-        hash = 37 * hash + this.row;
-        hash = 37 * hash + this.col;
+        int hash = 3;
+        hash = 89 * hash + Objects.hashCode(this.open);
+        hash = 89 * hash + this.row;
+        hash = 89 * hash + this.col;
+        hash = 89 * hash + Objects.hashCode(this.challenge);
         return hash;
     }
 
@@ -86,9 +82,17 @@ public class Door implements Serializable{
         if (this.col != other.col) {
             return false;
         }
+        if (this.challenge != other.challenge) {
+            return false;
+        }
         return true;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Door{" + "open=" + open + ", row=" + row + ", col=" + col + ", challenge=" + challenge + '}';
+    }
+
     
     
 }

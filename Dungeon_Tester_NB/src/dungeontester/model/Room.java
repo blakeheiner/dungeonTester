@@ -16,10 +16,10 @@ public class Room implements Serializable {
     private int row;
     private int col;
     
-    private Door[] doors;
-    private Trap[] traps;
-    private Item[] items;
-    private Boss[] bosses;
+    private Door door;
+    private Trap trap;
+    private Item item;
+    private Boss bosse;
    
     public Room() {
     }
@@ -40,49 +40,47 @@ public class Room implements Serializable {
         this.col = col;
     }
 
-    public Door[] getDoors() {
-        return doors;
+    public Door getDoor() {
+        return door;
     }
 
-    public void setDoors(Door[] doors) {
-        this.doors = doors;
+    public void setDoor(Door door) {
+        this.door = door;
     }
 
-    public Trap[] getTraps() {
-        return traps;
+    public Trap getTrap() {
+        return trap;
     }
 
-    public void setTraps(Trap[] traps) {
-        this.traps = traps;
+    public void setTrap(Trap trap) {
+        this.trap = trap;
     }
 
-    public Item[] getItems() {
-        return items;
+    public Item getItem() {
+        return item;
     }
 
-    public void setItems(Item[] items) {
-        this.items = items;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
-    public Boss[] getBosses() {
-        return bosses;
+    public Boss getBosse() {
+        return bosse;
     }
 
-    public void setBosses(Boss[] bosses) {
-        this.bosses = bosses;
+    public void setBosse(Boss bosse) {
+        this.bosse = bosse;
     }
-
-    @Override
-    public String toString() {
-        return "Room{" +  ", row=" + row + ", col=" + col + '}';
-    }
-    
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + this.row;
         hash = 97 * hash + this.col;
+        hash = 97 * hash + Objects.hashCode(this.door);
+        hash = 97 * hash + Objects.hashCode(this.trap);
+        hash = 97 * hash + Objects.hashCode(this.item);
+        hash = 97 * hash + Objects.hashCode(this.bosse);
         return hash;
     }
 
@@ -101,10 +99,24 @@ public class Room implements Serializable {
         if (this.col != other.col) {
             return false;
         }
+        if (!Objects.equals(this.door, other.door)) {
+            return false;
+        }
+        if (this.trap != other.trap) {
+            return false;
+        }
+        if (this.item != other.item) {
+            return false;
+        }
+        if (this.bosse != other.bosse) {
+            return false;
+        }
         return true;
     }
-   
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Room{" + "row=" + row + ", col=" + col + ", door=" + door + ", trap=" + trap + ", item=" + item + ", bosse=" + bosse + '}';
+    }
+
 }

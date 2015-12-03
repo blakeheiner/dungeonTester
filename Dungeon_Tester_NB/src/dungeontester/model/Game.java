@@ -12,7 +12,6 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     
-    private double totalTimePlayed;
     private String fileName;
     private Player player;
     private Map map;
@@ -36,14 +35,6 @@ public class Game implements Serializable{
         this.map = map;
     }
     
-    public double getTotalTimePlayed() {
-        return totalTimePlayed;
-    }
-
-    public void setTotalTimePlayed(double totalTimePlayed) {
-        this.totalTimePlayed = totalTimePlayed;
-    }
-
     public String getFileName() {
         return fileName;
     }
@@ -54,9 +45,10 @@ public class Game implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.totalTimePlayed) ^ (Double.doubleToLongBits(this.totalTimePlayed) >>> 32));
-        hash = 71 * hash + Objects.hashCode(this.fileName);
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.fileName);
+        hash = 17 * hash + Objects.hashCode(this.player);
+        hash = 17 * hash + Objects.hashCode(this.map);
         return hash;
     }
 
@@ -69,10 +61,13 @@ public class Game implements Serializable{
             return false;
         }
         final Game other = (Game) obj;
-        if (Double.doubleToLongBits(this.totalTimePlayed) != Double.doubleToLongBits(other.totalTimePlayed)) {
+        if (!Objects.equals(this.fileName, other.fileName)) {
             return false;
         }
-        if (!Objects.equals(this.fileName, other.fileName)) {
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
             return false;
         }
         return true;
@@ -80,7 +75,7 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "Game{" + "totalTimePlayed=" + totalTimePlayed + ", fileName=" + fileName + '}';
+        return "Game{" + "fileName=" + fileName + ", player=" + player + ", map=" + map + '}';
     }
-    
+
 }

@@ -12,7 +12,7 @@ import dungeontester.model.Map;
 public class MapControl {
 
     static Map createMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
 }

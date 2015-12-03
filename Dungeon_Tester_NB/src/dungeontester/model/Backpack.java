@@ -5,6 +5,7 @@
 package dungeontester.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,17 +17,17 @@ public class Backpack implements Serializable{
     //class instance variables
     private int capacity;
     private String use;
-    private Item[] items;
-    
+    ArrayList<Item> items = new ArrayList<>();
     
     public Backpack() {
+        items.add(Item.Dagger);
     }
 
-    public Item[] getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 
-    public void setItems(Item[] items) {
+    public void setItems(ArrayList<Item> items) {
         this.items = items;
     }
 
@@ -47,15 +48,11 @@ public class Backpack implements Serializable{
     }
 
     @Override
-    public String toString() {
-        return "Backpack{" + "capacity=" + capacity + ", use=" + use + '}';
-    }
-
-    @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 73 * hash + this.capacity;
-        hash = 73 * hash + Objects.hashCode(this.use);
+        int hash = 5;
+        hash = 97 * hash + this.capacity;
+        hash = 97 * hash + Objects.hashCode(this.use);
+        hash = 97 * hash + Objects.hashCode(this.items);
         return hash;
     }
 
@@ -74,10 +71,16 @@ public class Backpack implements Serializable{
         if (!Objects.equals(this.use, other.use)) {
             return false;
         }
+        if (!Objects.equals(this.items, other.items)) {
+            return false;
+        }
         return true;
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Backpack{" + "capacity=" + capacity + ", use=" + use + ", items=" + items + '}';
+    }
+
+
 }

@@ -12,6 +12,7 @@ import java.io.Serializable;
  */
 public enum Item implements Serializable{
     
+    Dagger(0, 5, 3, 5),
     ShortSword(1, 0, 3, 2),
     LongSword(1, 0, 5, 2),
     BroadSword(2, 1, 7, 0),

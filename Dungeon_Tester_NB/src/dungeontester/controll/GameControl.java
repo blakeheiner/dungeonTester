@@ -20,11 +20,8 @@ public class GameControl {
         
         game.setPlayer(player); // save player in game
         
-        
-        
         Map map = MapControl.createMap(); // create and initialize new map
         game.setMap(map); // save map in game
-        
         
     }
     
