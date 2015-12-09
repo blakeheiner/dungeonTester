@@ -3,11 +3,11 @@
  */
 package dungeontester.controll;
 
-import dungeontester.model.Boss;
+import dungeontester.model.Challenge;
+import dungeontester.model.Door;
+import dungeontester.model.Item;
 import dungeontester.model.Map;
 import dungeontester.model.Room;
-import dungeontester.model.Item;
-import dungeontester.model.Trap;
 
 /**
  *
@@ -24,15 +24,41 @@ public class MapControl {
     private static void createRooms(){
         Room rooms[] = new Room[25];
         
-        rooms[0] = 
+        Room startingRoom = new Room();
+        startingRoom.setRow(4);
+        startingRoom.setCol(0);
+        startingRoom.setItem(Item.Dagger);
+        rooms[0] = startingRoom;
+        
+        Room floorOneRoomOne = new Room();
+        floorOneRoomOne.setRow(4);
+        floorOneRoomOne.setCol(1);
+        floorOneRoomOne.setItem(Item.Buckler);
+        rooms[1] = floorOneRoomOne;
+
+        Room floorOneRoomTwo = new Room();
+        floorOneRoomTwo.setRow(4);
+        floorOneRoomTwo.setCol(2);
         
     }
         
     //assign rooms to each door (function)
-    private static void assignRoomsToDoors(){
+    private static void assignRoomsToDoors(Map map, Room[] rooms){
+        Door doors[][] = map.getDoors();
+        
+        //start point
+        doors[0][0].setRoom(rooms[0]);
+        doors[0][1].setRoom(rooms[1]);
         
     }
     
+    private static void assignChallengeToDoors(Map map){
+        Door doors[][] = map.getDoors();
+        
+        doors[0][0].setChallenge(Challenge.Triangle);
+        doors[0][1].setChallenge(Challenge.Rectangle);
+        
+    }
 }
     
     
