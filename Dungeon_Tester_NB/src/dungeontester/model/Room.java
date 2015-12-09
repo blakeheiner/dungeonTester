@@ -16,7 +16,6 @@ public class Room implements Serializable {
     private int row;
     private int col;
     
-    private Door door;
     private Trap trap;
     private Item item;
     private Boss bosse;
@@ -38,14 +37,6 @@ public class Room implements Serializable {
 
     public void setCol(int col) {
         this.col = col;
-    }
-
-    public Door getDoor() {
-        return door;
-    }
-
-    public void setDoor(Door door) {
-        this.door = door;
     }
 
     public Trap getTrap() {
@@ -77,7 +68,6 @@ public class Room implements Serializable {
         int hash = 7;
         hash = 97 * hash + this.row;
         hash = 97 * hash + this.col;
-        hash = 97 * hash + Objects.hashCode(this.door);
         hash = 97 * hash + Objects.hashCode(this.trap);
         hash = 97 * hash + Objects.hashCode(this.item);
         hash = 97 * hash + Objects.hashCode(this.bosse);
@@ -99,9 +89,6 @@ public class Room implements Serializable {
         if (this.col != other.col) {
             return false;
         }
-        if (!Objects.equals(this.door, other.door)) {
-            return false;
-        }
         if (this.trap != other.trap) {
             return false;
         }
@@ -116,7 +103,7 @@ public class Room implements Serializable {
 
     @Override
     public String toString() {
-        return "Room{" + "row=" + row + ", col=" + col + ", door=" + door + ", trap=" + trap + ", item=" + item + ", bosse=" + bosse + '}';
+        return "Room{" + "row=" + row + ", col=" + col + ", trap=" + trap + ", item=" + item + ", bosse=" + bosse + '}';
     }
 
 }

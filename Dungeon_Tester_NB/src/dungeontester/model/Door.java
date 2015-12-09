@@ -13,20 +13,30 @@ import java.util.Objects;
 public class Door implements Serializable{
     
     //class instance variables
-    private String open;
+    private boolean open;
     private int row;
     private int col;
+    
+    private Room room;
     
     private Challenge challenge;
 
     public Door() {
     }
 
-    public String getOpen() {
-        return open;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setOpen(String open) {
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public boolean getOpen() {
+        return true;
+    }
+
+    public void setOpen(boolean open) {
         this.open = open;
     }
 
@@ -56,11 +66,12 @@ public class Door implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.open);
-        hash = 89 * hash + this.row;
-        hash = 89 * hash + this.col;
-        hash = 89 * hash + Objects.hashCode(this.challenge);
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.open);
+        hash = 97 * hash + this.row;
+        hash = 97 * hash + this.col;
+        hash = 97 * hash + Objects.hashCode(this.room);
+        hash = 97 * hash + Objects.hashCode(this.challenge);
         return hash;
     }
 
@@ -82,6 +93,9 @@ public class Door implements Serializable{
         if (this.col != other.col) {
             return false;
         }
+        if (!Objects.equals(this.room, other.room)) {
+            return false;
+        }
         if (this.challenge != other.challenge) {
             return false;
         }
@@ -90,9 +104,8 @@ public class Door implements Serializable{
 
     @Override
     public String toString() {
-        return "Door{" + "open=" + open + ", row=" + row + ", col=" + col + ", challenge=" + challenge + '}';
+        return "Door{" + "open=" + open + ", row=" + row + ", col=" + col + ", room=" + room + ", challenge=" + challenge + '}';
     }
 
-    
-    
+  
 }

@@ -11,7 +11,7 @@ import java.io.Serializable;
 public enum Boss implements Serializable {
     
     Orc(25, 3, 3),
-    Wizzard(50, 5, 5),
+    DarkWizzard(50, 5, 5),
     Dragon(100, 7, 7),
     Hydra(200, 9, 9),
     Craken(400, 12, 12);
