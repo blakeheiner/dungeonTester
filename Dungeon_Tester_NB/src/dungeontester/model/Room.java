@@ -106,4 +106,8 @@ public class Room implements Serializable {
         return "Room{" + "row=" + row + ", col=" + col + ", trap=" + trap + ", item=" + item + ", bosse=" + bosse + '}';
     }
 
+    public void setBoss(Boss boss) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
